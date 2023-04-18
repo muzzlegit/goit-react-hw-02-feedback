@@ -6,8 +6,6 @@ import Section from './Section/Section';
 import Notification from './Notification/Notification';
 //STYLES
 import { Container } from './App.styled';
-//CONSTS
-const OPTIONS = ['good', 'neutral', 'bad'];
 
 export class App extends Component {
   state = {
@@ -38,7 +36,7 @@ export class App extends Component {
       <Container>
         <Section title="Please, leave Feedback">
           <FeedbackOptions
-            options={OPTIONS}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>

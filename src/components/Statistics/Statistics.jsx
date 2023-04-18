@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
 //STYLES
 import theme from 'theme';
 import { List, Item } from './Statistics.styled';
@@ -13,17 +12,11 @@ const colors = {
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <List>
-      <Item key={nanoid()} color={colors.good}>
-        Good: {good}
-      </Item>
-      <Item key={nanoid()} color={colors.neutral}>
-        Neutral: {neutral}
-      </Item>
-      <Item key={nanoid()} color={colors.bad}>
-        Bad: {bad}
-      </Item>
-      <Item key={nanoid()}>Total: {total}</Item>
-      <Item key={nanoid()}>Positive Feedback: {positivePercentage} %</Item>
+      <Item color={colors.good}>Good: {good}</Item>
+      <Item color={colors.neutral}>Neutral: {neutral}</Item>
+      <Item color={colors.bad}>Bad: {bad}</Item>
+      <Item>Total: {total}</Item>
+      <Item>Positive Feedback: {positivePercentage} %</Item>
     </List>
   );
 };
